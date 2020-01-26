@@ -1,0 +1,45 @@
+class Atm:
+    pin=0
+    balance=0
+
+    def createAccount(self):
+     self.pin=input("Kindly set your pin")
+     print("congrats pin set sucessfully")
+
+    def changePin(self):
+        temp=input("Purana pin kya tha?")
+
+        if self.pin==temp:
+            self.pin=input("Naya pin bata")
+            print("Ho gaya")
+        else:
+            print("Galat hai")
+
+    def deposit(self):
+        temp=input("pin bata")
+        if self.pin==temp:
+            amount=int(input("kitna deposit karna hai"))
+            self.balance=self.balance+amount
+            print("Deposited")
+        else:
+            print("Jyada paisa hai kya?")
+
+    def checkBalance(self):
+         temp=input("pin bata")
+         if self.pin==temp:
+            print("Your balance is",self.balance)
+         else:
+            print("Dusre ka balance q jaana hai")
+
+    def withdraw(self):
+         temp=input("pin bata")
+         if self.pin==temp:
+            amount=int(input("kitna chahiye"))
+            if amount<self.balance:
+                self.balance=self.balance-amount
+                print("Mil gaya na?")
+            else:
+                print("Aukaad me rahna seekh lo,beta!")
+
+         else:
+            print("sale chor") 
